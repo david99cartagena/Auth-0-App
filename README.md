@@ -1,4 +1,4 @@
-# 🔐 Auth0 Angular App
+# 🔐 Auth 0 App
 
 Aplicación web desarrollada en **Angular 16** que implementa **autenticación con Auth0** utilizando el SDK oficial `@auth0/auth0-spa-js`.
 
@@ -104,3 +104,5 @@ ng serve
 ```
 
 La aplicación estará disponible en: `http://localhost:4200/`
+
+Basado en el curso de **Fernando Herrera** – [Angular: De Cero a Experto (Edición 2018)](https://www.udemy.com/course/angular-2-fernando-herrera/)
