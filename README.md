@@ -10,8 +10,6 @@ El objetivo de este proyecto es reforzar conceptos clave de seguridad y arquitec
 - Callback y redirección tras autenticación
 - Uso de **RxJS** (`tap`, `concatMap`, `shareReplay`, `catchError`)
 
----
-
 ## 📸 Demo
 
 <!-- 🔗 **Demo en línea:** _(pendiente, puedes publicarla en Netlify/Vercel)_ -->
@@ -25,8 +23,6 @@ El objetivo de este proyecto es reforzar conceptos clave de seguridad y arquitec
 - **Vista protegida (solo con login)**
   ![Navbar Screenshot](https://raw.githubusercontent.com/david99cartagena/Auth-0-App/refs/heads/main/media/Screenshot-3.png)
 
----
-
 ## 🚀 Tecnologías Utilizadas
 
 - **Angular 16**
@@ -34,8 +30,6 @@ El objetivo de este proyecto es reforzar conceptos clave de seguridad y arquitec
 - **TypeScript**
 - **Auth0 SPA SDK (`@auth0/auth0-spa-js`)**
 - **HTML5 / CSS3**
-
----
 
 ## 📁 Estructura del Proyecto
 
@@ -62,8 +56,6 @@ src/
 ├── styles.css
 ```
 
----
-
 ## 🔑 Funcionalidades
 
 ✅ Autenticación con Auth0 (login/logout)  
@@ -72,8 +64,6 @@ src/
 ✅ Almacenamiento de perfil de usuario en un `BehaviorSubject`  
 ✅ Navbar dinámico según estado de login  
 ✅ Páginas públicas y protegidas
-
----
 
 ## 📦 Instalación
 
