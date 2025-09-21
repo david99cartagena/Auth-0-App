@@ -1,0 +1,34 @@
+<!-- <h1>Perfil de Usuario</h1>
+<hr />
+
+<pre *ngIf="auth.userProfile$ | async as profile">
+    <code>{{ profile|json }}</code>
+</pre> -->
+
+<h1 class="mb-3">Perfil de Usuario</h1>
+<hr />
+
+<div *ngIf="auth.userProfile$ | async as profile" class="card shadow-sm p-3" style="max-width: 400px">
+  <div class="text-center">
+    <img [src]="profile.picture" alt="Foto de perfil" class="rounded-circle mb-3" width="100" height="100" />
+    <h4 class="mb-1">{{ profile.name }}</h4>
+    <small class="text-muted">{{ profile.email }}</small>
+  </div>
+  <hr />
+  <ul class="list-unstyled mb-0">
+    <li>
+      <strong>Nombre:</strong> {{ profile.given_name }}
+      {{ profile.family_name }}
+    </li>
+    <li><strong>Usuario:</strong> {{ profile.nickname }}</li>
+    <li>
+      <strong>Email verificado:</strong>
+      {{ profile.email_verified ? "Sí" : "No" }}
+    </li>
+    <li>
+      <strong>Última actualización:</strong>
+      {{ profile.updated_at | date : "short" }}
+    </li>
+    <li><strong>ID:</strong> {{ profile.sub }}</li>
+  </ul>
+</div>
