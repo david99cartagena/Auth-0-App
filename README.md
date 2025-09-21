@@ -1,27 +1,106 @@
-# Authapp
+# 🔐 Auth0 Angular App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+Aplicación web desarrollada en **Angular 16** que implementa **autenticación con Auth0** utilizando el SDK oficial `@auth0/auth0-spa-js`.
 
-## Development server
+El objetivo de este proyecto es reforzar conceptos clave de seguridad y arquitectura en Angular:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Integración con **Auth0** para login/logout
+- Protección de rutas con **Guards**
+- Manejo de **observables** y `BehaviorSubject` para estado global
+- Callback y redirección tras autenticación
+- Uso de **RxJS** (`tap`, `concatMap`, `shareReplay`, `catchError`)
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 📸 Demo
 
-## Build
+<!-- 🔗 **Demo en línea:** _(pendiente, puedes publicarla en Netlify/Vercel)_ -->
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Pantalla de inicio**
+  ![Home Screenshot](https://raw.githubusercontent.com/david99cartagena/Auth-0-App/refs/heads/main/media/Screenshot-1.png)
 
-## Running unit tests
+- **Navbar con login/logout dinámico**
+  ![Protegida Screenshot](https://raw.githubusercontent.com/david99cartagena/Auth-0-App/refs/heads/main/media/Screenshot-2.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Vista protegida (solo con login)**
+  ![Navbar Screenshot](https://raw.githubusercontent.com/david99cartagena/Auth-0-App/refs/heads/main/media/Screenshot-3.png)
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 🚀 Tecnologías Utilizadas
 
-## Further help
+- **Angular 16**
+- **RxJS 7**
+- **TypeScript**
+- **Auth0 SPA SDK (`@auth0/auth0-spa-js`)**
+- **HTML5 / CSS3**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+---
+
+## 📁 Estructura del Proyecto
+
+```
+src/
+├── app/
+│ ├── app-routing.module.ts    # Configuración de rutas
+│ ├── app.component.*          # Componente raíz
+│ ├── app.module.ts            # Módulo principal
+│ ├── components/
+│ │ ├── callback/      # Procesa la redirección de Auth0
+│ │ ├── home/          # Página de inicio
+│ │ ├── navbar/        # Barra de navegación con login/logout
+│ │ ├── precios/       # Página pública (ejemplo)
+│ │ └── protegida/     # Página protegida (requiere login)
+│ ├── services/
+│ │ ├── auth.service.ts   # Lógica de integración con Auth0
+│ │ └── auth.guard.ts     # Guard para proteger rutas
+├── assets/
+│ └── .gitkeep
+├── favicon.ico
+├── index.html
+├── main.ts
+├── styles.css
+```
+
+---
+
+## 🔑 Funcionalidades
+
+✅ Autenticación con Auth0 (login/logout)  
+✅ Callback automático tras login  
+✅ Protección de rutas con `CanActivate`  
+✅ Almacenamiento de perfil de usuario en un `BehaviorSubject`  
+✅ Navbar dinámico según estado de login  
+✅ Páginas públicas y protegidas
+
+---
+
+## 📦 Instalación
+
+1. Clona este repositorio:
+
+```bash
+git clone https://github.com/david99cartagena/Auth-0-App.git
+```
+
+```bash
+cd Auth-0-App
+```
+
+2. Instala las dependencias:
+
+```bash
+npm install
+```
+
+3. Ejecuta el servidor local:
+
+```bash
+npm start
+```
+
+```bash
+ng serve
+```
+
+La aplicación estará disponible en: `http://localhost:4200/`
