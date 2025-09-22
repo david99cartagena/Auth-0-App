@@ -13,7 +13,7 @@ import {
   throwError,
 } from 'rxjs';
 import { tap, catchError, concatMap, shareReplay } from 'rxjs/operators';
-import { environment } from 'src/environments/environment.prod';
+import { environment } from 'src/environments/environment';
 // import { Router } from '@angular/router';
 
 @Injectable({
@@ -125,10 +125,14 @@ export class AuthService {
     // Ensure Auth0 client instance exists
     this.auth0Client$.subscribe((client: Auth0Client) => {
       // Call method to log out
+      // client.logout({
+      // client_id: 'JaeWH01OBrXsxHSFBY4wdAz6Rj9cthOZ',
+      // client_id: 'd2YFjGxBjdsnp3c1oboJP7uzcdFLA6r3',
+      // returnTo: `${environment.auth.redirectUri}`,
+      // });
       client.logout({
-        // client_id: 'JaeWH01OBrXsxHSFBY4wdAz6Rj9cthOZ',
-        client_id: 'd2YFjGxBjdsnp3c1oboJP7uzcdFLA6r3',
-        returnTo: `${environment.auth.redirectUri}`,
+        client_id: environment.auth.clientId,
+        returnTo: environment.auth.redirectUri,
       });
     });
   }
