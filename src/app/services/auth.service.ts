@@ -13,6 +13,7 @@ import {
   throwError,
 } from 'rxjs';
 import { tap, catchError, concatMap, shareReplay } from 'rxjs/operators';
+import { environment } from 'src/environments/environment.prod';
 // import { Router } from '@angular/router';
 
 @Injectable({
@@ -25,9 +26,9 @@ export class AuthService {
       createAuth0Client({
         // domain: 'strider.auth0.com',
         // client_id: 'JaeWH01OBrXsxHSFBY4wdAz6Rj9cthOZ',
-        domain: 'dev-k3u8sx0sn78xi0xb.us.auth0.com',
-        client_id: 'OXzlFATcJcYRbZikJtybLYTpVixlgIZk',
-        redirect_uri: `${window.location.origin}/callback`,
+        domain: environment.auth.domain,
+        client_id: environment.auth.clientId,
+        redirect_uri: environment.auth.redirectUri,
       })
     ) as Observable<Auth0Client>
   ).pipe(
@@ -51,7 +52,7 @@ export class AuthService {
   // Create a local property for login status
   loggedIn: boolean = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
   // When calling, options can be passed if desired
   // https://auth0.github.io/auth0-spa-js/classes/auth0client.html#getuser
