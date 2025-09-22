@@ -63,7 +63,8 @@ src/
 ✅ Protección de rutas con `CanActivate`  
 ✅ Almacenamiento de perfil de usuario en un `BehaviorSubject`  
 ✅ Navbar dinámico según estado de login  
-✅ Páginas públicas y protegidas
+✅ Páginas públicas y protegidas  
+✅ Protección de rutas con CanActivate mediante auth.guard.ts
 
 ## 📦 Instalación
 
@@ -94,5 +95,26 @@ ng serve
 ```
 
 La aplicación estará disponible en: `http://localhost:4200/`
+
+## ⚙️ Configuración de Auth 0
+
+1. Regístrate en [Auth0 Dashboard](https://auth0.com/).
+2. Crea una nueva aplicación de tipo **Single Page Application (SPA)**.
+3. Copia las credenciales:
+   - **Domain**
+   - **Client ID**
+4. Configura el **Callback URL** en Auth0 con: `http://localhost:4200/callback`
+5. Edita `src/environments/environment.ts`:
+
+```ts
+export const environment = {
+  production: false,
+  auth: {
+    domain: "TU_DOMINIO.auth0.com",
+    clientId: "TU_CLIENT_ID",
+    redirectUri: "http://localhost:4200",
+  },
+};
+```
 
 Basado en el curso de **Fernando Herrera** – [Angular: De Cero a Experto (Edición 2018)](https://www.udemy.com/course/angular-2-fernando-herrera/)
