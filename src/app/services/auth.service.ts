@@ -28,7 +28,7 @@ export class AuthService {
         // client_id: 'JaeWH01OBrXsxHSFBY4wdAz6Rj9cthOZ',
         domain: environment.auth.domain,
         client_id: environment.auth.clientId,
-        redirect_uri: environment.auth.redirectUri,
+        redirect_uri: `${environment.auth.redirectUri}/callback`,
       })
     ) as Observable<Auth0Client>
   ).pipe(

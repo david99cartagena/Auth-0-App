@@ -3,6 +3,6 @@ export const environment = {
   auth: {
     domain: 'dev-k3u8sx0sn78xi0xb.us.auth0.com',
     clientId: 'OXzlFATcJcYRbZikJtybLYTpVixlgIZk',
-    redirectUri: 'http://localhost:4200/callback',
+    redirectUri: 'http://localhost:4200',
   }
 };

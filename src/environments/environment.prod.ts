@@ -3,6 +3,6 @@ export const environment = {
   auth: {
     domain: 'dev-k3u8sx0sn78xi0xb.us.auth0.com',
     clientId: 'OXzlFATcJcYRbZikJtybLYTpVixlgIZk',
-    redirectUri: 'https://super-heliotrope-6908cf.netlify.app/callback',
+    redirectUri: 'https://super-heliotrope-6908cf.netlify.app',
   }
 };
