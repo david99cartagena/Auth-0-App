@@ -12,7 +12,7 @@ El objetivo de este proyecto es reforzar conceptos clave de seguridad y arquitec
 
 ## 📸 Demo
 
-🔗 **Visita la demo en línea:** [Auth 0 App en Netlify](https://starlit-valkyrie-da3355.netlify.app)
+🔗 **Visita la demo en línea:** [Auth 0 App en Netlify](https://super-heliotrope-6908cf.netlify.app/home)
 
 - **Pantalla de inicio**
   ![Home Screenshot](https://raw.githubusercontent.com/david99cartagena/Auth-0-App/refs/heads/main/media/Screenshot-1.png)
